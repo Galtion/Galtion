@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>标签 | Galtion</title>
+  <title>第255场周赛 | Galtion</title>
 
   <link rel="icon" type="image/jpeg" href="https://img02.sogoucdn.com/app/a/100540022/2021090300262671256369.jpg">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -571,66 +571,766 @@
 </header>
         <!-- 内容区域 -->
         
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-tags" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+ <!-- prismjs 代码高亮 -->
+ 
 
-<div class="tags-header" style="background-image:url('https://pic2.zhimg.com/80/v2-bf6c555e7c61a57ba4a1fd95a9a32975_1440w.jpg')">
-    <div class="tags-header-title">
-        tags
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+
+  <!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('https://wallpaperm.cmcm.com/56e0e92549585677b672eedc47d9c828.jpg')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        第255场周赛
+      </span>
     </div>
-    <div class="tags-header-desc">
     
-        <span class="title" id="tags-header-desc"></span>
-        <script>
-  function typedFn() {
-    const el = '#tags-header-desc';
-    const type = 'tag';
-    let desc = '愿你如风，被人温柔以待'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> 发表于：2021-08-25 |
+        </span>
+      
+
+      
+
+      
+    
+  </div>
+  
+  
+    <script src="/Galtion/Galtion.github.io/js/bubble/bubble.js"></script>
+  
+</div>
+
+
+
+
+
+<div class="post-detail-content post-row" 
+  style="padding-top: 0px;">
+  <div class="main-content">
+    <article class="post post-detail">
+      <div class="post-content">
+        <h2 id="题一：-找出数组的最大公约数"><a href="#题一：-找出数组的最大公约数" class="headerlink" title="题一：  找出数组的最大公约数"></a>题一：  找出数组的最大公约数</h2><h3 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h3><blockquote>
+<p>给你一个整数数组 nums ，返回数组中最大数和最小数的 最大公约数 。两个数的 最大公约数 是能够被两个数整除的最大正整数。</p>
+</blockquote>
+<hr>
+<h3 id="show-code"><a href="#show-code" class="headerlink" title="show code:"></a>show code:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">findGCD</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">sort</span>(nums.<span class="built_in">begin</span>(),nums.<span class="built_in">end</span>());</span><br><span class="line">        <span class="type">int</span> n=nums.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        <span class="type">int</span> rem;</span><br><span class="line">        <span class="keyword">while</span>(nums[n]&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            rem=nums[<span class="number">0</span>]%nums[n];</span><br><span class="line">            nums[<span class="number">0</span>]=nums[n];</span><br><span class="line">            nums[n]=rem;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题二：-找出不同的二进制字符串"><a href="#题二：-找出不同的二进制字符串" class="headerlink" title="题二：  找出不同的二进制字符串"></a>题二：  找出不同的二进制字符串</h2><h3 id="题目描述：-1"><a href="#题目描述：-1" class="headerlink" title="题目描述："></a>题目描述：</h3><blockquote>
+<p>给你一个字符串数组 nums ，该数组由 n 个 互不相同 的二进制字符串组成，且每个字符串长度都是 n 。请你找出并返回一个长度为 n 且 没有出现 在 nums 中的二进制字符串。如果存在多种答案，只需返回 任意一个 即可。</p>
+</blockquote>
+<hr>
+<h3 id="show-code-1"><a href="#show-code-1" class="headerlink" title="show code:"></a>show code:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  </span><br><span class="line">    <span class="function">string <span class="title">findDifferentBinaryString</span><span class="params">(vector&lt;string&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        map&lt;<span class="type">int</span>,<span class="type">int</span>&gt; mp;</span><br><span class="line">        <span class="type">int</span> n = nums.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span>(string a : nums)  &#123;</span><br><span class="line">            <span class="function">bitset&lt;16&gt; <span class="title">bit</span><span class="params">(a)</span></span>;   </span><br><span class="line">            mp[bit.<span class="built_in">to_ullong</span>()] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; ;i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(mp.<span class="built_in">count</span>(i) == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="function">bitset&lt;16&gt; <span class="title">bit</span><span class="params">(i)</span></span>;</span><br><span class="line">                string temp, s;</span><br><span class="line">                temp = bit.<span class="built_in">to_string</span>();</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> i = temp.<span class="built_in">size</span>() - n; i &lt; temp.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">                    s += temp[i];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> s;</span><br><span class="line">            &#125;              </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题三：-最小化目标值与所选元素的差"><a href="#题三：-最小化目标值与所选元素的差" class="headerlink" title="题三：  最小化目标值与所选元素的差"></a>题三：  最小化目标值与所选元素的差</h2><h3 id="题目描述：-2"><a href="#题目描述：-2" class="headerlink" title="题目描述："></a>题目描述：</h3><blockquote>
+<p>给你一个大小为 m x n 的整数矩阵 mat 和一个整数 target 。从矩阵的 每一行 中选择一个整数，你的目标是 最小化 所有选中元素之 和 与目标值 target 的 绝对差 。返回 最小的绝对差 。a 和 b 两数字的 绝对差 是 a - b 的绝对值。</p>
+</blockquote>
+<hr>
+<h3 id="show-code-2"><a href="#show-code-2" class="headerlink" title="show code:"></a>show code:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">minimizeTheDifference</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; mat, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = mat[<span class="number">0</span>].<span class="built_in">size</span>(), m = mat.<span class="built_in">size</span>(), i , j;</span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">dp</span><span class="params">(<span class="number">4910</span>,<span class="number">0</span>)</span></span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> a : mat[<span class="number">0</span>])</span><br><span class="line">              dp[a] = <span class="number">1</span>;  </span><br><span class="line">        <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt; m; i++) &#123;</span><br><span class="line">            <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">temp</span><span class="params">(<span class="number">4910</span>,<span class="number">0</span>)</span></span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> sum = <span class="number">0</span>; sum &lt;= target; sum++) &#123;</span><br><span class="line">                <span class="keyword">if</span>(dp[sum] == <span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="type">int</span> a : mat[i]) &#123;</span><br><span class="line">                        temp[sum + a] = <span class="number">1</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> sum = target + <span class="number">1</span>; sum &lt;= i * <span class="number">70</span>; sum++) &#123;</span><br><span class="line">                <span class="keyword">if</span>(dp[sum] == <span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="type">int</span> a : mat[i]) &#123;</span><br><span class="line">                        temp[sum + a] = <span class="number">1</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            dp = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        i = j = target;</span><br><span class="line">        <span class="keyword">while</span>(<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span>(i &gt; <span class="number">0</span> &amp;&amp; dp[i] == <span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">abs</span>(target - i);</span><br><span class="line">            <span class="keyword">if</span>(j &lt; <span class="number">4901</span> &amp;&amp; dp[j] == <span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">abs</span>(target - j);</span><br><span class="line">            i--;j++;</span><br><span class="line">        &#125;</span><br><span class="line">              </span><br><span class="line">       <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="题四：-从子集的和还原数组"><a href="#题四：-从子集的和还原数组" class="headerlink" title="题四：  从子集的和还原数组"></a>题四：  从子集的和还原数组</h2><h3 id="题目描述：-3"><a href="#题目描述：-3" class="headerlink" title="题目描述："></a>题目描述：</h3><blockquote>
+<p>存在一个未知数组需要你进行还原，给你一个整数 n 表示该数组的长度。另给你一个数组 sums ，由未知数组中全部 2n 个 子集的和 组成（子集中的元素没有特定的顺序）。返回一个长度为 n 的数组 ans 表示还原得到的未知数组。如果存在 多种 答案，只需返回其中 任意一个 。如果可以由数组 arr 删除部分元素（也可能不删除或全删除）得到数组 sub ，那么数组 sub 就是数组 arr 的一个 子集 。sub 的元素之和就是 arr 的一个 子集的和 。一个空数组的元素之和为 0 。<br><strong>注意：</strong><br>生成的测试用例将保证至少存在一个正确答案。</p>
+</blockquote>
+<hr>
+<h3 id="answer"><a href="#answer" class="headerlink" title="answer"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-array-given-subset-sums/solution/cong-zi-ji-de-he-huan-yuan-shu-zu-by-lee-aj8o/"><em>answer</em></a></h3><hr>
+<h4 id="竞赛链接"><a href="#竞赛链接" class="headerlink" title="竞赛链接"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/contest/weekly-contest-255/">竞赛链接</a></h4><h4 id="题目来源：力扣（LeetCode）著作权著作权归领扣网络所有。"><a href="#题目来源：力扣（LeetCode）著作权著作权归领扣网络所有。" class="headerlink" title="题目来源：力扣（LeetCode）著作权著作权归领扣网络所有。"></a>题目来源：力扣（LeetCode）著作权著作权归领扣网络所有。</h4><h5 id="展示代码均来自作者，著作权作者所有"><a href="#展示代码均来自作者，著作权作者所有" class="headerlink" title="展示代码均来自作者，著作权作者所有"></a>展示代码均来自作者，著作权作者所有</h5>
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/Galtion/Galtion.github.io/tags/algorithm/" class="">
+              algorithm
+            </a>
+          
+        </div>
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>Galtion</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/Galtion/Galtion.github.io/2021/08/25/contest/255场周赛/" target="_blank" title="第255场周赛">https://github.com/Galtion/Galtion.github.io/2021/08/25/contest/255场周赛/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="https://wallpaperm.cmcm.com/56e0e92549585677b672eedc47d9c828.jpg" class="lazyload placeholder" data-srcset="https://wallpaperm.cmcm.com/56e0e92549585677b672eedc47d9c828.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+    </div>
+    <a href="/Galtion/Galtion.github.io/2023/07/05/Computer_Network/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0%E4%BA%8C/" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> 上一篇:
+        <div class="title-text">计算机网络概述二</div>
+      </div>
+      
+      <!-- <div class="content">
+        aaa
+
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="https://wallpaperm.cmcm.com/c60b4b0296113025cb1b86114559b4ea.jpg" class="lazyload placeholder" data-srcset="https://wallpaperm.cmcm.com/c60b4b0296113025cb1b86114559b4ea.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+    </div>
+    <a href="/Galtion/Galtion.github.io/2021/08/01/contest/%E5%8A%9B%E6%89%A3-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E5%85%AB%E6%9C%88/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fas fa-angle-right"></i>
+        <div class="title-text">力扣-每日一题8月</div>
+      </div>
+      <!-- <div class="content">
+        矩阵中战斗力最弱的 K 行
+date:2021-08-1 16:47:24category: C++
+
+
+题目描述：
+给
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-show="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-show="visible">
+      <div class="donate-box_close">
+        <i class="fas fa-times" aria-hidden="true" @click="cancelDialogDrawer" pointer></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" pointer :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" pointer :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-show="tabActive === 'Alipay'">
+          <img src="/Galtion/Galtion.github.io/medias/zfb.jpg" class="lazyload placeholder" data-srcset="/Galtion/Galtion.github.io/medias/zfb.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-show="tabActive === 'WeChatpay'">
+          <img src="/Galtion/Galtion.github.io/medias/wx.jpg" class="lazyload placeholder" data-srcset="/Galtion/Galtion.github.io/medias/wx.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        // console.log('aa', $('.main-content'));
+        body.style.cssText = 'overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
 </script>
     
-    </div>
-    <div class="mask-box"></div>
-</div>
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/Galtion/Galtion.github.io/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
 
 
-<div id="tags" class="container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
-            </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/Galtion/Galtion.github.io/tags/Computer-Network/" title="Computer_Network: 2">
-                    <span class="tag-content"
-                        title="Computer_Network" style="background-color: #F9E79F;">Computer_Network
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/Galtion/Galtion.github.io/tags/algorithm/" title="algorithm: 2">
-                    <span class="tag-content"
-                        title="algorithm" style="background-color: #F9EBEA;">algorithm
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-            </div>
-        </div>
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+      
+<section id="comments" style="padding: 1em;"
+	class="animated bounceInUp">
+	<div id="vcomment" class="comment"></div>
+</section>
+<style>
+	#comments {
+		background: rgba(255,255,255,0.9);
+	}
+	#veditor {
+		background-image: url('https://img.zcool.cn/community/01a253594c71cfa8012193a329a77f.gif');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: right;
+		background-color: rgba(255, 255, 255, 0);
+		resize: vertical;
+	}
+	#veditor:focus{
+		background-position-y: 200px;
+		transition: all 0.2s ease-in-out 0s;
+	}
+	#vcomment .vcards .vcard .vh .vhead .vtag.vvisitor {
+		background-color: #42b983;
+	}
+	.v[data-class=v] .vbtn:active, .v[data-class=v] .vbtn:hover {
+		color: #42b983;
+		border-color: #42b983;
+	}
+	#vcomment .vcards .vcard .vhead .vsys i {
+		display: none;
+	}
+	/* 底部valine链接 */
+	#vcomment .vpower {
+		display: none;
+	}
+	
+	/* 底下注释是修改 名称和邮箱和网址输入框的样式 */
+	/* #vcomment .vheader {
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	#vcomment .vheader .vnick {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	}
+
+	#vcomment .vheader .vmail {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	}
+
+	#vcomment .vheader .vlink {
+		width: 31%;
+		border: 2px solid #dedede;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px
+	} */
+
+	img.vimg {
+		transition: all 1s;
+		/* 头像旋转时间为 1s */
+	}
+
+	img.vimg:hover {
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+	}
+
+	#vcomment .vcards .vcard {
+		padding: 15px 20px 0 20px;
+		border-radius: 10px;
+		margin-bottom: 15px;
+		box-shadow: 0 0 4px 1px rgba(0, 0, 0, .12);
+		transition: all .3s
+	}
+
+	#vcomment .vcards .vcard:hover {
+		box-shadow: 0 0 8px 3px rgba(0, 0, 0, .12)
+	}
+
+	#vcomment .vcards .vcard .vh .vcard {
+		border: none;
+		box-shadow: none;
+	}
+</style>
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <aside id='l_side'>
+  
+    
+      <section class="widget side_blogger">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/Galtion/Galtion.github.io/about/'>
+          <img src='https://img1.imgtp.com/2023/07/04/dpQV8ly9.jpg'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+          <h2>Galtion</h2>
+        
+        
+          <p>保持沉着</p>
+
+        
+        
+          <p><span id="jinrishici-sentence">Galtion</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/Galtion/Galtion.github.io/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:weighston@gmail.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/Galtion/Galtion.github.io"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=3049137436"
+              class="social fab fa-qq flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+    
+  
+  
+  
+
+  <div class="layout_sticky">    
+    
+      
+<section class="widget side_toc">
+  
+  <header>
+    
+      <i style="color: " class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name' style="color: ">本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="toc-main">
+      <div class="toc-content">
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E4%B8%80%EF%BC%9A-%E6%89%BE%E5%87%BA%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0"><span class="toc-text">题一：  找出数组的最大公约数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0%EF%BC%9A"><span class="toc-text">题目描述：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#show-code"><span class="toc-text">show code:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E4%BA%8C%EF%BC%9A-%E6%89%BE%E5%87%BA%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">题二：  找出不同的二进制字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0%EF%BC%9A-1"><span class="toc-text">题目描述：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#show-code-1"><span class="toc-text">show code:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E4%B8%89%EF%BC%9A-%E6%9C%80%E5%B0%8F%E5%8C%96%E7%9B%AE%E6%A0%87%E5%80%BC%E4%B8%8E%E6%89%80%E9%80%89%E5%85%83%E7%B4%A0%E7%9A%84%E5%B7%AE"><span class="toc-text">题三：  最小化目标值与所选元素的差</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0%EF%BC%9A-2"><span class="toc-text">题目描述：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#show-code-2"><span class="toc-text">show code:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E5%9B%9B%EF%BC%9A-%E4%BB%8E%E5%AD%90%E9%9B%86%E7%9A%84%E5%92%8C%E8%BF%98%E5%8E%9F%E6%95%B0%E7%BB%84"><span class="toc-text">题四：  从子集的和还原数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0%EF%BC%9A-3"><span class="toc-text">题目描述：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#answer"><span class="toc-text">answer</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AB%9E%E8%B5%9B%E9%93%BE%E6%8E%A5"><span class="toc-text">竞赛链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%9D%A5%E6%BA%90%EF%BC%9A%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89%E8%91%97%E4%BD%9C%E6%9D%83%E8%91%97%E4%BD%9C%E6%9D%83%E5%BD%92%E9%A2%86%E6%89%A3%E7%BD%91%E7%BB%9C%E6%89%80%E6%9C%89%E3%80%82"><span class="toc-text">题目来源：力扣（LeetCode）著作权著作权归领扣网络所有。</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%95%E7%A4%BA%E4%BB%A3%E7%A0%81%E5%9D%87%E6%9D%A5%E8%87%AA%E4%BD%9C%E8%80%85%EF%BC%8C%E8%91%97%E4%BD%9C%E6%9D%83%E4%BD%9C%E8%80%85%E6%89%80%E6%9C%89"><span class="toc-text">展示代码均来自作者，著作权作者所有</span></a></li></ol></li></ol></li></ol></li></ol> -->
+        <div class="toc"></div>
+      </div>
     </div>
+  </div>
+</section>
+<!-- 手机端目录按钮 -->
+<div id="toc-mobile-btn">
+  <i class="fas fa-list-ul" aria-hidden="true"></i>
 </div>
+
+      
+  <section class="widget side_recent_post">
+    
+  <header>
+    
+      <a style="color: " href='/tags/'><i class="fas fa-book fa-fw" aria-hidden="true"></i><span class='name'>最新文章</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      
+      <!-- hash算法 -->
+      
+      <div class="aside-list">
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/Galtion/Galtion.github.io/2023/07/05/Computer_Network/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0%E4%B8%80/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://wallpaperm.cmcm.com/56e0e92549585677b672eedc47d9c828.jpg" class="lazyload placeholder" data-srcset="https://wallpaperm.cmcm.com/56e0e92549585677b672eedc47d9c828.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-05</span>
+                
+              </div>
+              <a class="post-title" href="/Galtion/Galtion.github.io/2023/07/05/Computer_Network/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0%E4%B8%80/">计算机网络概述一</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/Galtion/Galtion.github.io/2023/07/05/Data%20_tructure/index/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-03a22891ccba9bccf6424dfd7cbf4be7_1440w.webp" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-03a22891ccba9bccf6424dfd7cbf4be7_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-05</span>
+                
+              </div>
+              <a class="post-title" href="/Galtion/Galtion.github.io/2023/07/05/Data%20_tructure/index/">暂无标题</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/Galtion/Galtion.github.io/2023/07/05/Computer_Network/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0%E4%BA%8C/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://wallpaperm.cmcm.com/56e0e92549585677b672eedc47d9c828.jpg" class="lazyload placeholder" data-srcset="https://wallpaperm.cmcm.com/56e0e92549585677b672eedc47d9c828.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">07-05</span>
+                
+              </div>
+              <a class="post-title" href="/Galtion/Galtion.github.io/2023/07/05/Computer_Network/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0%E4%BA%8C/">计算机网络概述二</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/Galtion/Galtion.github.io/2021/08/25/contest/255%E5%9C%BA%E5%91%A8%E8%B5%9B/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://wallpaperm.cmcm.com/56e0e92549585677b672eedc47d9c828.jpg" class="lazyload placeholder" data-srcset="https://wallpaperm.cmcm.com/56e0e92549585677b672eedc47d9c828.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">08-25</span>
+                
+              </div>
+              <a class="post-title" href="/Galtion/Galtion.github.io/2021/08/25/contest/255%E5%9C%BA%E5%91%A8%E8%B5%9B/">第255场周赛</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/Galtion/Galtion.github.io/2021/08/01/contest/%E5%8A%9B%E6%89%A3-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E5%85%AB%E6%9C%88/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://wallpaperm.cmcm.com/c60b4b0296113025cb1b86114559b4ea.jpg" class="lazyload placeholder" data-srcset="https://wallpaperm.cmcm.com/c60b4b0296113025cb1b86114559b4ea.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">08-01</span>
+                
+              </div>
+              <a class="post-title" href="/Galtion/Galtion.github.io/2021/08/01/contest/%E5%8A%9B%E6%89%A3-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E5%85%AB%E6%9C%88/">力扣-每日一题8月</a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+    
+  </div>
+</aside>
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/Galtion/Galtion.github.io/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
+	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
+	<transition-group tag="ul" :name="names">
+		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+			<img :src="image" class="bg-swiper-img no-lazy">
+		</li>
+	</transition-group>
+</div>
+<script>
+	var vm = new Vue({
+		el: '#appBgSwiper',
+		data: {
+			names: '' || 'fade' || 'fade', // translate-fade fade
+			mark: 0,
+			img: [],
+			bgColor: '',
+			time: null
+		},
+		methods: {   //添加方法
+			change(i, m) {
+				if (i > m) {
+					// this.names = 'fade';
+				} else if (i < m) {
+					// this.names = 'fade';
+				} else {
+					return;
+				}
+				this.mark = i;
+			},
+			prev() {
+				// this.names = 'fade';
+				this.mark--;
+				if (this.mark === -1) {
+					this.mark = 3;
+					return
+				}
+			},
+			next() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			autoPlay() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			play() {
+				let bgImgDelay = '' || '180000'
+				let delay = parseInt(bgImgDelay) || 180000;
+				this.time = setInterval(this.autoPlay, delay);
+			},
+			enter() {
+				clearInterval(this.time);
+			},
+			leave() {
+				this.play();
+			}
+		},
+		created() {
+			this.play()
+		},
+		beforeDestroy() {
+			clearInterval(this.time);
+		},
+		mounted() {
+			let prop = '' || '';
+			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
+			if (isImg) {
+				let img = prop.split(',');
+				let configRoot = '/Galtion/Galtion.github.io/'
+				let arrImg = [];
+				img.forEach(el => {
+					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+					var objExp = new RegExp(Expression);
+
+					if (objExp.test(el)) {
+						// http or https
+						arrImg.push(el);
+					} else {
+						// 非http or https开头
+						// 本地文件
+						let firstStr = el.charAt(0);
+						if (firstStr == '/') {
+							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+						}
+						el = configRoot + el;
+						arrImg.push(el);
+					}
+				})
+				this.img = arrImg;
+			} else {
+				this.bgColor = prop;
+			}
+		}
+	})
+</script>
+
+<style>
+	.bg-swiper-box {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.bg-swiper-img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+
+
+
+  <script>
+  function loadMermaid() {
+    if (document.getElementsByClassName('mermaid').length) {
+      if (window.mermaidJsLoad) mermaid.init()
+      else {
+        loadScript('https://unpkg.com/mermaid/dist/mermaid.min.js').then(() => {
+          window.mermaidJsLoad = true
+          mermaid.initialize({
+            theme: 'default',
+          })
+          if ('true') {
+            mermaid.init();
+          }
+        })
+      }
+    }
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    loadMermaid();
+  })
+
+  document.addEventListener('pjax:complete', function () {
+    loadMermaid();
+  })
+  
+</script>
+
 
       </main>
     </div>

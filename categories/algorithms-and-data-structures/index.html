@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>标签 | Galtion</title>
+  <title>分类: algorithms and data structures | Galtion</title>
 
   <link rel="icon" type="image/jpeg" href="https://img02.sogoucdn.com/app/a/100540022/2021090300262671256369.jpg">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -571,20 +571,21 @@
 </header>
         <!-- 内容区域 -->
         
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-tags" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
 
-<div class="tags-header" style="background-image:url('https://pic2.zhimg.com/80/v2-bf6c555e7c61a57ba4a1fd95a9a32975_1440w.jpg')">
-    <div class="tags-header-title">
-        tags
-    </div>
-    <div class="tags-header-desc">
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+<div class="bg-light-floor-categoryDetail" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+
+<div class="category-header"  style="background-image:url('https://pic3.zhimg.com/80/v2-98dcd81cb0d1fee52a807c13cedb8338_1440w.jpg?source=1940ef5c')">
+  <div class="category-header-title">
+    category
+  </div>
+  <div class="category-header-desc">
     
-        <span class="title" id="tags-header-desc"></span>
-        <script>
+      <span class="title" id="category-header-desc"></span>
+      <script>
   function typedFn() {
-    const el = '#tags-header-desc';
-    const type = 'tag';
+    const el = '#category-header-desc';
+    const type = 'categoryDetail';
     let desc = '愿你如风，被人温柔以待'
     var typed = new Typed(el, {
       strings: [desc],
@@ -597,39 +598,84 @@
   }
   typedFn();
 </script>
-    
-    </div>
-    <div class="mask-box"></div>
+      
+  </div>
+  <div class="mask-box"></div>
 </div>
 
 
-<div id="tags" class="container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+<div class="category">
+  <div class="category-name">
+    <div class="name" style="background-color: #E8F8F5;">algorithms and data structures 分类</div>
+  </div>
+  <!-- 每一篇文章卡片 -->
+  <!-- hash算法 -->
+
+<section class="posts">
+  
+    
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2021-08-01</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/Galtion/Galtion.github.io/2021/08/01/contest/%E5%8A%9B%E6%89%A3-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E5%85%AB%E6%9C%88/">力扣-每日一题8月</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Galtion/Galtion.github.io/tags/algorithm/" rel="tag">algorithm</a></li></ul>
+
             </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/Galtion/Galtion.github.io/tags/Computer-Network/" title="Computer_Network: 2">
-                    <span class="tag-content"
-                        title="Computer_Network" style="background-color: #F9E79F;">Computer_Network
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/Galtion/Galtion.github.io/tags/algorithm/" title="algorithm: 2">
-                    <span class="tag-content"
-                        title="algorithm" style="background-color: #F9EBEA;">algorithm
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/Galtion/Galtion.github.io/categories/algorithms-and-data-structures/">algorithms and data structures</a>
+</div>
+
+
             </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/Galtion/Galtion.github.io/2021/08/01/contest/%E5%8A%9B%E6%89%A3-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E5%85%AB%E6%9C%88/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://wallpaperm.cmcm.com/c60b4b0296113025cb1b86114559b4ea.jpg" class="lazyload placeholder" data-srcset="https://wallpaperm.cmcm.com/c60b4b0296113025cb1b86114559b4ea.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            矩阵中战斗力最弱的 K 行
+date:2021-08-1 16:47:24category: C++
+
+
+题目描述：
+给你一个大小为 m * n 的矩阵 mat，矩阵由若干军人和平民组成，分别用 1 和 0 表示。请你返回矩阵中战斗力最弱的
+          </div>
         </div>
-    </div>
+        <div class="post-more">
+          <a href="/Galtion/Galtion.github.io/2021/08/01/contest/%E5%8A%9B%E6%89%A3-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E5%85%AB%E6%9C%88/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/Galtion/Galtion.github.io/2021/08/01/contest/%E5%8A%9B%E6%89%A3-%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E5%85%AB%E6%9C%88/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://wallpaperm.cmcm.com/c60b4b0296113025cb1b86114559b4ea.jpg" class="lazyload placeholder" data-srcset="https://wallpaperm.cmcm.com/c60b4b0296113025cb1b86114559b4ea.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+        </a>
+      </div>
+    </article>
+  
+</section>
+</div>
+<div class="w-70">
+  
 </div>
 
       </main>
